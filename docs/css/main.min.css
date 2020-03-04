@@ -1,0 +1,2 @@
+*{margin:0;font-family:"PF DinText Pro"}.hero{display:flex;flex-direction:column;background:url(../img/hero.png)}.hero__headline{margin:184px auto 78px;font-size:48px;font-weight:lighter}.hero__strategies{list-style-type:none;margin:auto}.hero__strategy{display:inline-flex;width:365px;height:365px;margin-right:53px;background:rgba(255,255,255,.6);border-radius:50%;text-align:center}.hero__strategy:hover{background:#000}.hero__strategy-info{margin:auto}.hero__strategy-headline{margin-top:40px;font-weight:lighter;font-size:28px}
+/*# sourceMappingURL=main.min.css.map */

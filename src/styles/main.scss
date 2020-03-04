@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  font-family: "PF DinText Pro";
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  background: url("../img/hero.png");
+
+  &__headline {
+    margin: 184px auto 78px;
+    font-size: 48px;
+    font-weight: lighter;
+  }
+  &__strategies {
+    list-style-type: none;
+    margin: auto;
+  }
+
+  &__strategy {
+    display: inline-flex;
+    width: 365px;
+    height: 365px;
+    margin-right: 53px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    text-align: center;
+
+    &:hover {
+        background: black;
+    }
+  }
+
+  &__strategy-info {
+    margin: auto;
+  }
+
+  &__strategy-headline {
+    margin-top: 40px;
+    font-weight: lighter;
+    font-size: 28px;
+  }
+}
