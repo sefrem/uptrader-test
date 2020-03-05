@@ -7,31 +7,101 @@
       content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"
     />
     <link rel="stylesheet" type="text/css" href="css/main.min.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      ScrollReveal({ reset: true });
+  </script>
+  
   </head>
   <body>
     <div class="hero">
+      <div class="hero__content">
       <h1 class="hero__headline">Выберите способ заработка</h1>
         <ul class="hero__strategies">
+          
           <li class="hero__strategy">
             <div class="hero__strategy-info">
               <img class="hero__strategy-icon" src="./icons/trading.svg" alt=""/>
               <p class="hero__strategy-headline">Торговать</p>
             </div>
+            <a  href="#trading" class="hero__strategy-link"></a> 
           </li>
+        
           <li class="hero__strategy">
             <div class="hero__strategy-info">
               <img class="hero__strategy-icon" src="./icons/investing.svg" alt=""/>
               <p class="hero__strategy-headline">Инвестировать</p>
             </div>
+            <a  href="#investing" class="hero__strategy-link"></a>
           </li>
           <li class="hero__strategy">
             <div class="hero__strategy-info">
               <img class="hero__strategy-icon" src="./icons/attracting.svg" alt=""/>
               <p class="hero__strategy-headline">Привлекать инвесторов</p>
+              <a  href="#attracting" class="hero__strategy-link"></a>
             </div>
           </li>
-
         </ul>
+      </div>
     </div>
+    <div class="main">
+      <div class="main__content">
+        <div class="play-button">
+        <img src="./icons/play.svg" class="play-button__icon" alt=''/>
+      </div>
+      <ul class="main__strategies">
+        <li class="main__strategy main__strategy_active" id="trading">
+          <div class="main__strategy-headline">Торговать</div>
+        </li>
+        <li class="main__strategy" id="investing">
+          <div class="main__strategy-headline">Инвестировать</div>
+        </li>
+        <li class="main__strategy" id="attracting">
+          <div class="main__strategy-headline">Привлекать инвесторов</div>
+        </li>
+      </ul>
+        <div class="main__strategy-info main__strategy-info_trading">
+        <p class="main__strategy-description">
+          Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас
+          зарабатывал тот, кто умеет это делать, тогда попробуйте ЛАММ. ЛАММ - 
+          это сервис копирования сделок успешных трейдеров. Доходность ничем не ограничена!
+        </p>
+          <p class="main__strategy-steps-header">Как это работает</p>
+          <ol class="main__strategy-steps">
+            <li class="main__strategy-step">
+              Вы выбираете управляющего из рейтинга по фильтру Options
+            </li>
+            <li class="main__strategy-step">
+              Подключаете свой счет к счету Управляющего
+            </li>
+            <li class="main__strategy-step">
+              На вашем счете начинается копирование сделок
+            </li>
+            <li class="main__strategy-step">
+              <span class="main__strategy-step-text">Обратите внимание, что вы не перечисляете свои деньги
+              Управляющему. Все ваши средства остаются на Вашем счете</span>
+            </li>
+            <li class="main__strategy-step">
+              Вы можете подключиться к нескольким управляющим одновременно
+            </li>
+            <li class="main__strategy-step">
+              Вы можете отключиться от Управляющего в любой момент
+            </li>
+          </ol>
+          <button type="button" class="main__strategy-btn btn">Продолжить</button>
+        </div>
+        
+      
+    </div>
+    </div>
+    <script  type="text/javascript" src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 1300
+      });
+    </script>
   </body>
 </html>
+
+

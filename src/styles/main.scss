@@ -1,44 +1,224 @@
 * {
   margin: 0;
   font-family: "PF DinText Pro";
+  box-sizing: border-box;
 }
 
 .hero {
+  &_hidden{
+    animation: hide 1s;
+  }
   display: flex;
   flex-direction: column;
   background: url("../img/hero.png");
+  background-position: center center;
+  background-size: cover;
+
+  &__content {
+    margin: auto;
+    text-align: center;
+  }
 
   &__headline {
-    margin: 184px auto 78px;
+    margin: 184px 0 78px;
     font-size: 48px;
     font-weight: lighter;
   }
   &__strategies {
     list-style-type: none;
-    margin: auto;
+    margin: 0 auto 275px;
   }
 
   &__strategy {
     display: inline-flex;
+    position: relative;
     width: 365px;
     height: 365px;
     margin-right: 53px;
     background: rgba(255, 255, 255, 0.6);
     border-radius: 50%;
     text-align: center;
+    cursor: pointer;
 
     &:hover {
-        background: black;
+      border: 8px solid transparent;
+      box-shadow: inset 0px 0px 0px 1px #00b0a2;
     }
   }
 
   &__strategy-info {
     margin: auto;
+  &_animated {
+    animation: move 0.8s backwards;
+  }
   }
 
   &__strategy-headline {
     margin-top: 40px;
     font-weight: lighter;
     font-size: 28px;
+  }
+
+  &__strategy-link {
+    position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   text-decoration: none;
+   z-index: 10;
+   background-color: white;
+   opacity: 0;
+   filter: alpha(opacity=0);
+  }
+}
+
+@keyframes move {
+  to {
+    transform: translateY(-450px);
+    opacity: 0.1
+  }
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  50% {
+    // transform: translateY(50px);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+    z-index: 10;
+  }
+}
+
+@keyframes hide {
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    z-index: 0;
+    opacity: 0;
+  }
+}
+
+.main {
+  &_visible{
+    animation: appear 0.2s 0.3s forwards;
+  }
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -20;
+  display: flex;
+  background: url(../img/main.png);
+  background-position: center center;
+  background-size: cover;
+  &__content {
+    position: relative;
+    margin: auto;
+  }
+  &__strategies {
+    list-style: none;
+  }
+  &__strategy {
+    display: inline-flex;
+    width: 365px;
+    height: 115px;
+    margin-right: 53px;
+    cursor: pointer;
+
+    &_active, &:hover{
+      border-bottom: 3px solid #00b0a2;
+      color: #00b0a2;
+    }
+  }
+
+  &__strategy-headline {
+    margin: auto;
+    font-size: 28px;
+  }
+
+  &__strategy-info {
+    margin: 80px 0 0 40px;
+  }
+  &__strategy-description {
+    max-width: 680px;
+    font-size: 18px;
+    font-weight: lighter;
+    line-height: 24px;
+  }
+  &__strategy-steps-header {
+    margin: 36px 0;
+    font-size: 24px;
+    font-weight: lighter;
+  }
+  &__strategy-steps {
+    padding: 0;
+    list-style: none;
+    counter-reset: li;
+  }
+  &__strategy-step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    max-width: 680px;
+    counter-increment: li;
+    &:before {
+      content: counter(li);
+      color: #00b0a2;
+      align-self: end;
+      width: 1em;
+      font-size: 32px;
+    }
+  }
+  &__strategy-step-text {
+    margin-left: 8px;
+  }
+  &__strategy-step {
+    font-size: 18px;
+    font-weight: lighter;
+  }
+
+  &__strategy-btn {
+    margin: 43px 0 254px;
+    &:hover {
+    }
+    &:active {
+    }
+    &:focus {
+    }
+  }
+}
+
+.btn {
+  padding: 15px 28px 13px;
+  font-size: 18px;
+  background-color: #00b0a2;
+  color: white;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+}
+
+.play-button {
+  position: absolute;
+  top: 380px;
+  right: 220px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #00b0a2;
+  display: flex;
+
+  &__icon{
+    margin: auto auto auto 36px;
   }
 }

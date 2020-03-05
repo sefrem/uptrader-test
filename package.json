@@ -24,5 +24,6 @@
     "gulp-terser": "^1.2.0",
     "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-pngquant": "^8.0.0"
-  }
+  },
+  "dependencies": {}
 }
