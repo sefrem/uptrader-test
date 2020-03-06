@@ -1,0 +1,36 @@
+.btn {
+    padding: 15px 28px 13px;
+    font-size: 18px;
+    background-color: #00b0a2;
+    color: white;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 357px;
+    right: 247px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #00b0a2;
+    display: flex;
+    z-index: 10;
+  
+    @media(max-width:1158px) {
+      right:172px;
+    }
+    @media(max-width:1044px) {
+      right:114px;
+    }
+    @media(max-width:921px) {
+      right:55px;
+    }
+  
+    &__icon{
+      margin: auto auto auto 36px;
+    }
+  }

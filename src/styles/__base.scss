@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    font-family: "PF DinText Pro";
+    box-sizing: border-box;
+  }
+  
+  html {
+    overflow: hidden;
+    @media(max-width: 879px) {
+      overflow: auto;
+    }
+    
+  }
+  

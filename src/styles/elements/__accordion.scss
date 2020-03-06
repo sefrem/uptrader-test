@@ -1,0 +1,83 @@
+.accordion {
+  display: none;
+  @media (max-width: 879px) {
+    display: flex;
+  }
+
+  &__strategies {
+    margin: auto;
+  }
+
+  &__strategy {
+    margin-bottom: 13px;
+  }
+
+  &__strategy-headline {
+    display: flex;
+    width: 340px;
+    height: 68px;
+    font-size: 19px;
+    background: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+  }
+
+  &__strategy-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__strategy-icon {
+    margin: 0 19px 0 15px;
+    &_trading,
+    &_investing {
+      width: 35px;
+      height: 28px;
+    }
+    &_attracting {
+      width: 29px;
+      height: 36px;
+    }
+  }
+
+  &__arrow {
+    margin: 0 15px 0 auto;
+  }
+  &__strategies {
+    list-style-type: none;
+  }
+
+  &__strategy-checkbox {
+    display: none;
+  }
+
+  &__strategy-description {
+    width: 345px;
+    overflow-y: hidden;
+    height: 0;
+    transition: height 1s ease-out;
+  }
+
+  &__strategy-checkbox:checked ~ &__strategy-description {
+    height: auto;
+    overflow: visible;
+    margin: 22px 0 0 12px;
+  }
+
+  &__strategy-checkbox:checked ~ &__strategy-headline &__arrow {
+    transform: rotate(180deg);
+  }
+  &__btn {
+    margin-top: 21px;
+  }
+ &__image {
+   height: 270px;
+   margin-left: -12px;
+  background: url("../../img/accordion_img.png");
+  background-position: 90%;
+  background-size: cover;
+  background-repeat: no-repeat;
+ } 
+}
+
+

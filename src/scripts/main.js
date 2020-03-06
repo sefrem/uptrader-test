@@ -25,15 +25,13 @@ const downScrollAnimation = () => {
   hero.classList.add("hero_hidden")
   mainContent.classList.add("main__strategy-info_visible")
 }
-
-const throttledDownScrollAnimation = throttle(downScrollAnimation, 500)
+const throttledDownScrollAnimation = throttle(downScrollAnimation, 800)
 
 const upScroll = () => {
   main.classList.remove("main_visible")
   hero.classList.remove("hero_hidden")
   mainContent.classList.remove("main__strategy-info_visible")
 }
-
 
 const  checkScrollDirection = e =>  {
   if (checkScrollDirectionIsUp(e)) {
@@ -50,8 +48,16 @@ const checkScrollDirectionIsUp = e => {
   return e.deltaY < 0;
 }
 
-
-anchor.forEach(anchor => anchor.addEventListener("click", downScrollAnimation, false));
-document.body.addEventListener('wheel', checkScrollDirection)
+const checkIfAnimationRequired = () => {
+  if(window.innerWidth > 879) {
+    anchor.forEach(anchor => anchor.addEventListener("click", downScrollAnimation, false));
+  document.body.addEventListener('wheel', checkScrollDirection)
+  } else {
+    document.body.removeEventListener('wheel', checkScrollDirection)
+  }
+  
+}
+document.addEventListener("DOMContentLoaded", checkIfAnimationRequired)
+window.addEventListener('resize', checkIfAnimationRequired)
 
 

@@ -1,0 +1,59 @@
+.main {
+  @media (max-width: 879px) {
+    display: none;
+  }
+  &_visible {
+    animation: mainAppear 0.2s 0.6s forwards;
+  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -20;
+  display: flex;
+  background: url(../img/main.png);
+  background-position: center center;
+  background-size: cover;
+  &__content {
+    position: relative;
+    margin: auto;
+  }
+  &__strategies {
+    list-style: none;
+    @media (max-width: 1301px) {
+      text-align: center;
+    }
+  }
+  &__strategy {
+    display: inline-flex;
+    width: 365px;
+    height: 115px;
+    margin-right: 53px;
+    cursor: pointer;
+
+    &_active,
+    &:hover {
+      border-bottom: 3px solid #047e74;
+      color: #00b0a2;
+    }
+  }
+
+  &__strategy-headline {
+    margin: auto;
+    font-size: 28px;
+  }
+
+  &__strategy-info {
+    margin: 80px 0 0 40px;
+    opacity: 0;
+    &_visible {
+      animation: mainContentAppear 0.6s 0.8s forwards;
+    }
+  }
+
+  &__btn {
+   margin: 45px 0 250px;
+  }
+}

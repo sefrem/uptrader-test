@@ -7,159 +7,222 @@
       content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"
     />
     <link rel="stylesheet" type="text/css" href="css/main.min.css" />
-    <script src="https://unpkg.com/scrollreveal"></script>
-  
   </head>
   <body>
     <div class="hero">
       <div class="hero__content">
-      <h1 class="hero__headline">Выберите способ заработка</h1>
+        <h1 class="hero__headline">Выберите способ заработка</h1>
         <ul class="hero__strategies">
-          
           <li class="hero__strategy">
             <div class="hero__strategy-info">
-              <img class="hero__strategy-icon hero__strategy-icon_trading" src="./icons/trading.svg" alt=""/>
+              <img
+                class="hero__strategy-icon hero__strategy-icon_trading"
+                src="./icons/trading.svg"
+                alt=""
+              />
               <p class="hero__strategy-headline">Торговать</p>
             </div>
-            <a href="#trading" class="hero__strategy-link"></a> 
+            <a href="#trading" class="hero__strategy-link"></a>
           </li>
-        
+
           <li class="hero__strategy">
             <div class="hero__strategy-info">
-              <img class="hero__strategy-icon hero__strategy-icon_investing" src="./icons/investing.svg" alt=""/>
+              <img
+                class="hero__strategy-icon hero__strategy-icon_investing"
+                src="./icons/investing.svg"
+                alt=""
+              />
               <p class="hero__strategy-headline">Инвестировать</p>
             </div>
-            <a  href="#trading" class="hero__strategy-link"></a>
+            <a href="#trading" class="hero__strategy-link"></a>
           </li>
           <li class="hero__strategy">
             <div class="hero__strategy-info">
-              <img class="hero__strategy-icon hero__strategy-icon_attracting" src="./icons/attracting.svg" alt=""/>
+              <img
+                class="hero__strategy-icon hero__strategy-icon_attracting"
+                src="./icons/attracting.svg"
+                alt=""
+              />
               <p class="hero__strategy-headline">Привлекать инвесторов</p>
             </div>
-              <a  href="#trading" class="hero__strategy-link"></a>
-            
+            <a href="#trading" class="hero__strategy-link"></a>
           </li>
         </ul>
       </div>
-    
 
-
-        <div class="accordion">
-          <ul class="accordion__strategies">
-              
-            <li class="accordion__strategy">
+      <div class="accordion mb-248">
+        <ul class="accordion__strategies">
+          <li class="accordion__strategy">
+            <input
+              type="checkbox"
+              name="handle1"
+              id="trading"
+              class="accordion__strategy-checkbox"
+            />
+            <label for="trading" class="accordion__strategy-headline">
               <div class="accordion__strategy-info">
-                <input type="checkbox" name="collapse1" id="handle1" checked="checked" class="accordion__strategy-checkbox">
-                <img class="accordion__strategy-icon" src="./icons/trading.svg" alt=""/>
-                <p class="accordion__strategy-headline">Торговать</p>
+                <img
+                  class="accordion__strategy-icon accordion__strategy-icon_trading"
+                  src="./icons/trading.svg"
+                  alt=""
+                />
+                <span>Самостоятельно торговать</span>
+              </div>
+              <img class="accordion__arrow" src="./icons/arrow.svg" alt="" />
+            </label>
+            <div
+              class="accordion__strategy-description accordion__strategy-description_trading"
+            >
+              <p class="strategy__description">
+                Если вы ищете пассивный доход и предпочитаете, чтобы деньги для
+                вас зарабатывал тот, кто умеет это делать, тогда попробуйте
+                ЛАММ. ЛАММ - это сервис копирования сделок успешных трейдеров.
+                Доходность ничем не ограничена!
+              </p>
+              <div class="strategy">
+                <p class="strategy__header">Как это работает</p>
+                <ol class="strategy__steps">
+                  <li class="strategy__step">
+                    <span class="strategy__step-text"
+                      >Вы выбираете управляющего из рейтинга по фильтру
+                      Options</span
+                    >
+                  </li>
+                  <li class="strategy__step">
+                    <span class="strategy__step-text"
+                      >Подключаете свой счет к счету Управляющего</span
+                    >
+                  </li>
+                  <li class="strategy__step">
+                    <span class="strategy__step-text"
+                      >На вашем счете начинается копирование сделок</span
+                    >
+                  </li>
+                  <li class="strategy__step">
+                    <span class="strategy__step-text"
+                      >Обратите внимание, что вы не перечисляете свои деньги
+                      Управляющему. Все ваши средства остаются на Вашем
+                      счете</span
+                    >
+                  </li>
+                  <li class="strategy__step">
+                    <span class="strategy__step-text"
+                      >Вы можете подключиться к нескольким управляющим
+                      одновременно</span
+                    >
+                  </li>
+                  <li class="strategy__step">
+                    <span class="strategy__step-text"
+                      >Вы можете отключиться от Управляющего в любой
+                      момент</span
+                    >
+                  </li>
+                </ol>
+              </div>
+              <button type="button" class="strategy__btn btn accordion__btn">
+                Открыть счет
+              </button>
+              <div class="accordion__image"></div>
             </div>
-                <img class="accordion__arrow" src="./icons/arrow.svg" alt="" />
-                <!-- <div class="main__strategy-info main__strategy-info_trading">
-                    <p class="main__strategy-description">
-                      Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас
-                      зарабатывал тот, кто умеет это делать, тогда попробуйте ЛАММ. ЛАММ - 
-                      это сервис копирования сделок успешных трейдеров. Доходность ничем не ограничена!
-                    </p>
-                      <p class="main__strategy-steps-header">Как это работает</p>
-                      <ol class="main__strategy-steps">
-                        <li class="main__strategy-step">
-                          Вы выбираете управляющего из рейтинга по фильтру Options
-                        </li>
-                        <li class="main__strategy-step">
-                          Подключаете свой счет к счету Управляющего
-                        </li>
-                        <li class="main__strategy-step">
-                          На вашем счете начинается копирование сделок
-                        </li>
-                        <li class="main__strategy-step">
-                          <span class="main__strategy-step-text">Обратите внимание, что вы не перечисляете свои деньги
-                          Управляющему. Все ваши средства остаются на Вашем счете</span>
-                        </li>
-                        <li class="main__strategy-step">
-                          Вы можете подключиться к нескольким управляющим одновременно
-                        </li>
-                        <li class="main__strategy-step">
-                          Вы можете отключиться от Управляющего в любой момент
-                        </li>
-                      </ol>
-                      <button type="button" class="main__strategy-btn btn">Продолжить</button>
-                    </div> -->
-            </li>
+          </li>
 
-            <li class="accordion__strategy">
-                <div class="accordion__strategy-info">
-                <input type="checkbox" name="collapse2" id="handle2" checked="checked" class="accordion__strategy-checkbox">
-                <img class="accordion__strategy-icon" src="./icons/investing.svg" alt=""/>
-                <p class="accordion__strategy-headline">Инвестировать</p>
-                </div>
-                <img class="accordion__arrow" src="./icons/arrow.svg" alt="" />
-            </li>
+          <li class="accordion__strategy">
+            <input
+              type="checkbox"
+              name="handle1"
+              id="investing"
+              class="accordion__strategy-checkbox"
+            />
+            <label for="investing" class="accordion__strategy-headline">
+              <div class="accordion__strategy-info">
+                <img
+                  class="accordion__strategy-icon accordion__strategy-icon_trading"
+                  src="./icons/investing.svg"
+                  alt=""
+                />
+                <span>Инвестировать</span>
+              </div>
+              <img class="accordion__arrow" src="./icons/arrow.svg" alt="" />
+            </label>
+          </li>
 
-            <li class="accordion__strategy">
-                <div class="accordion__strategy-info">
-                <input type="checkbox" name="collapse3" id="handle3" checked="checked" class="accordion__strategy-checkbox">
-                <img class="accordion__strategy-icon" src="./icons/attracting.svg" alt=""/>
-                <p class="accordion__strategy-headline">Привлекать инвесторов</p>
-                </div>
-                <img class="accordion__arrow" src="./icons/arrow.svg" alt="" />
-            </li>
-            </ul>
-            </div>
-
-          </div>
+          <li class="accordion__strategy">
+            <input
+              type="checkbox"
+              name="handle1"
+              id="attracting"
+              class="accordion__strategy-checkbox"
+            />
+            <label for="attracting" class="accordion__strategy-headline">
+              <div class="accordion__strategy-info">
+                <img
+                  class="accordion__strategy-icon accordion__strategy-icon_trading"
+                  src="./icons/attracting.svg"
+                  alt=""
+                />
+                <span>Привлекать инвесторов</span>
+              </div>
+              <img class="accordion__arrow" src="./icons/arrow.svg" alt="" />
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <div class="main">
       <div class="main__content">
         <div class="play-button">
-        <img src="./icons/play.svg" class="play-button__icon" alt=''/>
-      </div>
-      <ul class="main__strategies">
-        <li class="main__strategy main__strategy_active" id="trading">
-          <div class="main__strategy-headline">Торговать</div>
-        </li>
-        <li class="main__strategy">
-          <div class="main__strategy-headline">Инвестировать</div>
-        </li>
-        <li class="main__strategy">
-          <div class="main__strategy-headline">Привлекать инвесторов</div>
-        </li>
-      </ul>
+          <img src="./icons/play.svg" class="play-button__icon" alt="" />
+        </div>
+        <ul class="main__strategies">
+          <li class="main__strategy main__strategy_active" id="trading">
+            <div class="main__strategy-headline">Торговать</div>
+          </li>
+          <li class="main__strategy">
+            <div class="main__strategy-headline">Инвестировать</div>
+          </li>
+          <li class="main__strategy">
+            <div class="main__strategy-headline">Привлекать инвесторов</div>
+          </li>
+        </ul>
         <div class="main__strategy-info main__strategy-info_trading">
-        <p class="main__strategy-description">
-          Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас
-          зарабатывал тот, кто умеет это делать, тогда попробуйте ЛАММ. ЛАММ - 
-          это сервис копирования сделок успешных трейдеров. Доходность ничем не ограничена!
-        </p>
-          <p class="main__strategy-steps-header">Как это работает</p>
-          <ol class="main__strategy-steps">
-            <li class="main__strategy-step">
+          <p class="strategy__description">
+            Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас
+            зарабатывал тот, кто умеет это делать, тогда попробуйте ЛАММ. ЛАММ -
+            это сервис копирования сделок успешных трейдеров. Доходность ничем
+            не ограничена!
+          </p>
+          <p class="strategy__header">Как это работает</p>
+          <ol class="strategy__steps">
+            <li class="strategy__step">
               Вы выбираете управляющего из рейтинга по фильтру Options
             </li>
-            <li class="main__strategy-step">
+            <li class="strategy__step">
               Подключаете свой счет к счету Управляющего
             </li>
-            <li class="main__strategy-step">
+            <li class="strategy__step">
               На вашем счете начинается копирование сделок
             </li>
-            <li class="main__strategy-step">
-              <span class="main__strategy-step-text">Обратите внимание, что вы не перечисляете свои деньги
-              Управляющему. Все ваши средства остаются на Вашем счете</span>
+            <li class="strategy__step">
+              <span class="strategy__step-text"
+                >Обратите внимание, что вы не перечисляете свои деньги
+                Управляющему. Все ваши средства остаются на Вашем счете</span
+              >
             </li>
-            <li class="main__strategy-step">
+            <li class="strategy__step">
               Вы можете подключиться к нескольким управляющим одновременно
             </li>
-            <li class="main__strategy-step">
+            <li class="strategy__step">
               Вы можете отключиться от Управляющего в любой момент
             </li>
           </ol>
-          <button type="button" class="main__strategy-btn btn">Продолжить</button>
+          <button type="button" class="strategy__btn btn main__btn">
+            Продолжить
+          </button>
         </div>
-    </div>
+      </div>
     </div>
 
-    <script  type="text/javascript" src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
-
-
