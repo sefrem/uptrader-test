@@ -1,0 +1,25 @@
+.accordion {
+    display: none;
+    @media(max-width: 879px) {
+        display: flex;
+    }
+
+    &__strategy {
+        width: 340px;
+        height: 68px;
+        background: rgba(255, 255, 255, 0.6);
+      }
+
+    &__strategy-info {
+            display: inline-flex;
+            margin-left: 20px;
+            align-items: center; 
+    }
+    &__strategies {
+        list-style-type: none;
+    }
+
+    &__strategy-checkbox {
+        display: none;
+    }
+}

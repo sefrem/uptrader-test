@@ -1,42 +1,55 @@
-const animatedStrategy = document.querySelectorAll(".hero__strategy");
+const animatedStrategy = document.querySelector(".hero__content");
 const anchor = document.querySelectorAll(".hero__strategy-link");
 const main = document.querySelector('.main')
 const hero = document.querySelector('.hero')
-
-// ScrollReveal().reveal(".main", {
-//   duraion: 0,
-//   delay: 500,
-//   // distance: "1000px",
-//   // opacity: 0
-// });
+const mainContent = document.querySelector('.main__strategy-info')
 
 
-anchor.forEach(anchor => anchor.addEventListener("click", function(e) {
-  e.preventDefault;
+function throttle(func, delay) {  
+  let inThrottle;
+  return function() {
+      if(!inThrottle) {
+          func.apply(this, arguments);
+          inThrottle = true;
+          setTimeout(() => inThrottle = false, delay);
+      }
+  }
+}
+
+const downScrollAnimation = () => {
+    animatedStrategy.classList.remove("hero__strategy-info_animated")
+    void animatedStrategy.offsetWidth
+    animatedStrategy.classList.add("hero__strategy-info_animated")
  
-  // -> removing the class
-  animatedStrategy.forEach(item =>
-    item.classList.remove("hero__strategy-info_animated")
-  );
-  
-  
-  // -> triggering reflow /* The actual magic */
-  // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
-  // Oops! This won't work in strict mode. Thanks Felis Phasma!
-  // element.offsetWidth = element.offsetWidth;
-  // Do this instead:
-  animatedStrategy.forEach(item =>
-    void item.offsetWidth
-  );
- 
-  
-  // -> and re-adding the class
-  animatedStrategy.forEach(item =>
-    item.classList.add("hero__strategy-info_animated")
-  );
   main.classList.add("main_visible")
   hero.classList.add("hero_hidden")
-}, false));
+  mainContent.classList.add("main__strategy-info_visible")
+}
+
+const throttledDownScrollAnimation = throttle(downScrollAnimation, 500)
+
+const upScroll = () => {
+  main.classList.remove("main_visible")
+  hero.classList.remove("hero_hidden")
+  mainContent.classList.remove("main__strategy-info_visible")
+}
 
 
-// anchor.addEventListener("click", scrolling);
+const  checkScrollDirection = e =>  {
+  if (checkScrollDirectionIsUp(e)) {
+    upScroll()
+  } else {
+    throttledDownScrollAnimation()
+  }
+}
+
+const checkScrollDirectionIsUp = e => {
+  if (e.wheelDelta) {
+    return e.wheelDelta > 0;
+  }
+  return e.deltaY < 0;
+}
+
+
+anchor.forEach(anchor => anchor.addEventListener("click", downScrollAnimation, false));
+document.body.addEventListener('wheel', checkScrollDirection)
